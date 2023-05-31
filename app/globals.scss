@@ -1,0 +1,255 @@
+/* globals.scss */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+$primary-color: #009688;
+$secondary-color: #ff5722;
+$text-color: #333;
+$heading-font: "Arial", sans-serif;
+$text-font: "Verdana", sans-serif;
+
+h1 {
+  color: $primary-color;
+  font-size: 28px;
+  margin-bottom: 10px;
+  font-family: $heading-font;
+  transition: color 0.3s;
+  margin-top: 30px!important;
+}
+
+p{
+  max-width: 300px;
+  text-align: center;
+  margin:0 auto;
+}
+
+nav {
+  background-color: $primary-color;
+  padding: 10px 0;
+
+  ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+
+    li {
+      padding: 0 10px;
+
+      a {
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        font-family: $heading-font;
+        transition: color 0.3s;
+
+        &:hover {
+          text-decoration: underline;
+          color: lighten($primary-color, 20%);
+        }
+      }
+    }
+  }
+}
+
+.services-page {
+  text-align: center;
+
+  p {
+    color: $text-color;
+    font-size: 16px;
+    font-family: $text-font;
+  }
+}
+
+.about-page {
+  text-align: center;
+
+  h1 {
+    color: $primary-color;
+    font-size: 28px;
+    margin-bottom: 10px;
+    font-family: $heading-font;
+    transition: color 0.3s;
+  }
+
+  p {
+    color: $text-color;
+    font-size: 16px;
+    font-family: $text-font;
+  }
+}
+
+.index-page {
+  text-align: center;
+
+  h1 {
+    color: $primary-color;
+    font-size: 28px;
+    margin-bottom: 20px;
+    font-family: $heading-font;
+    transition: color 0.3s;
+  }
+
+  .users-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 600px;
+    padding: 0;
+
+    li {
+      background-color: $secondary-color;
+      border-radius: 8px;
+      color: white;
+      font-family: $text-font;
+      font-size: 14px;
+      list-style: none;
+      margin: 10px;
+      padding: 20px;
+      text-align: center;
+      width: 200px;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: darken($secondary-color, 10%);
+      }
+
+      h5 {
+        color: white;
+        font-size: 16px;
+        font-family: $heading-font;
+        margin-top: 0;
+        transition: color 0.3s;
+      }
+    }
+  }
+}
+
+.users-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 0;
+
+  li {
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    color: #333;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    list-style: none;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    width: calc(33.33% - 20px); 
+    transition: background-color 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #e0e0e0;
+    }
+
+    h5 {
+      color: #333;
+      font-size: 16px;
+      font-family: Arial, sans-serif;
+      margin-top: 0;
+      transition: color 0.3s;
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+
+  button {
+    background-color: $primary-color;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    margin: 0 5px;
+    padding: 8px 12px;
+    transition: background-color 0.3s;
+
+    &:hover,
+    &.active {
+      background-color: darken($primary-color, 10%);
+    }
+  }
+}
+
+.user-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+
+  h1 {
+    color: $primary-color;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .user-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+
+    img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      color: $primary-color;
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: $text-color;
+      font-size: 16px;
+      margin-bottom: 0;
+    }
+  }
+
+  .back-button {
+    background-color: $primary-color;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
+  }
+}
